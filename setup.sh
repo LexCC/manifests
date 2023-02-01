@@ -34,6 +34,6 @@ kustomize build apps/training-operator/upstream/overlays/kubeflow | kubectl $ope
 kustomize build common/user-namespace/base | kubectl $operation -f -
 kubectl $operation -f ./access_kfp_from_jupyter_notebook.yaml
 kubectl $operation -f ./notebook-pv.yaml
-
+kubectl $operation -f ./jupyter-svc.yaml
 # kubectl create --namespace istio-system secret tls kf-tls-cert --key /root/ssl/kubeflow.cn.key --cert /root/ssl/kubeflow.cn.crt
 # kubectl edit cm config-domain --namespace knative-serving // Add kubeflow.XX under data section
